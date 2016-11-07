@@ -1,49 +1,34 @@
 $(document).ready(function(){
-    var streamers = ['goldglove', 'a93_', 'c9sneaky', 'lol_peanut', 'kdjg', 'calebhart42', 'unlckyme', 'eyes1015', 'delordione'];
+    $(".button-collapse").sideNav();
+    var streamers = ['goldglove', 'proteqtv', 'c9sneaky', 'freaken_rican', 'lagmarine10', 'calebhart42', 'unlckyme', 'eyes1015', 'delordione', 'freecodecamp', 'food'];
     var apiURL = "https://api.twitch.tv/kraken/streams?client_id=j6rg8fuur9h606pyrsy9t75rzh1tyqp&channel=" + streamers.join(',');   
 
     console.log(apiURL);
 
-    $.getJSON(apiURL, function(data){
+    $.getJSON(apiURL, function(data){       
         var online =[];
         var offline = [];
-        for(var i=0; i< data._total; i++){
+
+        for(var i=0; i<data._total; i++){
             var streamerName = data.streams[i].channel.display_name.toLowerCase();
-            online.push(streamerName);
-        }
-        for(var x=0; x<streamers.length;x++){
-            if(online.indexOf(streamers[x]) === -1) offline.push(streamers[x]);
-        }
-
-                showStreamers(online);
-
-        $('.all').on('click',function(){
-          showStreamers(streamers, data, "all");
-        });
-        $('.online').on('click',function(){
-          showStreamers(online, data, "online");
-        });
-        $('.offline').on('click',function(){
-          showStreamers(offline, data, "offline");
-        });
-
+            online.push(streamerName);}
+        for(var j=0; j<streamers.length;j++)
+            if(online.indexOf(streamers[j]) === -1) offline.push(streamers[j]);
+        
+        $('.all').on('click', function(){ getStreamer(streamers, data); });
+        $('.online').on('click', function(){ getStreamer(online, data); });
+        $('.offline').on('click', function(){ getStreamer(offline, data); });
     });
+
 });
 
-function showStreamers(streamType, data, streamStatus){
-    var html='';
+function getStreamer(streamType, data){
+    var html = '';
+    for(var q=0; q<streamType.length; q++){
+        html += "<a class= 'collection-item avatar'><img src='https://static-cdn.jtvnw.net/jtv_user_pictures/freaken_rican-profile_image-2de8e465b814688a-300x300.jpeg' class='circle'>" + streamType[q] + "<span class='title'>Climbing to diamond</span><br><p>hello</p></a>";
+        //html += "<p><div class='chip'>" + streamType[q] + "</div></p>";
 
-    console.log(streamType);
-    for (var p=0;p<streamType.length; p++){
-        html += "<div class='item'> " + streamType[p] + "</div>";
-
-          if(streamStatus==="online"){
-             $('.item').addClass("onlineItem");
-             $('#rightPane > div').css('background-color','red');
-             console.log(data.streams[p].preview.large);
-          }
-
-     }
-    $('#rightPane').html(html);
-
+        //https://api.twitch.tv/kraken/users/a93_?client_id=j6rg8fuur9h606pyrsy9t75rzh1tyqp <--- to get the user avatar
+    }
+    $('.collection').html(html);
 }

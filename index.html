@@ -3,27 +3,58 @@
         <title>Twitch Viewer</title>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">        
         <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     </head>
     <body>
-        <div id="wrapper">
-            <div id="leftPane">
-                <h1>Twitch Viewer</h1>
+            <nav class='grey darken-3'>
+                <div class="nav-wrapper">
+                <a href='#!' class='brand-logo'>Twitch Viewer</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class='right hide-on-med-and-down'>
+                    <li class='all'><a href="#">All Streamers</a></li>
+                    <li class='online'><a href="#">Online</a></li>
+                    <li class='offline'><a href="#">Offline</a></li>
+                </ul>
+                <ul class='side-nav' id="mobile-demo">
+                    <li class='all'><a href="#">All Streamers</a></li>
+                    <li class='online'><a href="#">Online</a></li>
+                    <li class='offline'><a href="#">Offline</a></li>
+                </ul>
+                </div>
+            </nav>
+            <div class='container'>
+                  <div class="row">        
+                <div class="collection">
+                    <a href="#!" class='collection-item avatar'>
+                        <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/a93_-profile_image-c04365a33947db27-300x300.jpeg" class='circle'>
+                        <span class='title'>Only Nami Supporting - Diamond 5</span>
+                        <p><div class='chip blue-grey lighten-1'>A93_</div><div class='chip'>League of Legends</div></p>
+                    </a>
+                    <a href="#!" class='collection-item avatar'>
+                        <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/a93_-profile_image-c04365a33947db27-300x300.jpeg" class='circle'>
+                        <span class='title'>A93_ Supporting Stream</span>
+                        <p>Game: League of Legends<br>
+                        <div class='chip'>Online</div></p>
+                    </a>
+                    <a href="#!" class='collection-item avatar'>
+                        <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/a93_-profile_image-c04365a33947db27-300x300.jpeg" class='circle'>
+                        <span class='title'>A93_ Supporting Stream</span>
+                        <p>Game: League of Legends<br>
+                        <div class='chip'>Online</div></p>
+                    </a>
+                
+                </div>
 
-                <nav id="navigation">
-                    <ul>
-                        <li class='all'>All Streamers</li>
-                        <li class='online'>Online</li>
-                        <li class='offline'>Offline</li>
-                    </ul>
-                </nav>
-            </div>
 
-            <div id="rightPane">
+
             </div>
-        </div>
+            
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
         <script src="js/index.js"></script>
+        
     </body>
 </html>
 
