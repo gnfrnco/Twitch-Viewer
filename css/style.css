@@ -87,3 +87,7 @@ li {
 ::-webkit-scrollbar-thumb {
     background: #9E579D;
 }
+
+.onlineItem {
+    border: 5px solid red;
+}
