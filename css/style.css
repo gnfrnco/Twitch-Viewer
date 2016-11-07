@@ -46,7 +46,7 @@ li {
 }
 
 .item {
-    flex-basis: 400px;
+    flex-basis: 25vw;
     color: white;
     height: 300px;
     background-color: #444;
@@ -61,7 +61,12 @@ li {
     }
     #leftPane {width: 100vw;}
 
-    #rightPane {overflow: auto;}
+    #rightPane {overflow: auto;
+    }
+
+    .item {
+        flex-basis: 45vw;
+    }
 
     li {display: inline;}
 
