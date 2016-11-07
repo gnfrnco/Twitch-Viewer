@@ -5,7 +5,6 @@ $(document).ready(function(){
     console.log(apiURL);
 
     $.getJSON(apiURL, function(data){
-        showStreamers(online);
         var online =[];
         var offline = [];
         for(var i=0; i< data._total; i++){
@@ -15,6 +14,8 @@ $(document).ready(function(){
         for(var x=0; x<streamers.length;x++){
             if(online.indexOf(streamers[x]) === -1) offline.push(streamers[x]);
         }
+
+                showStreamers(online);
 
         $('.all').on('click',function(){
           showStreamers(streamers, data, "all");
