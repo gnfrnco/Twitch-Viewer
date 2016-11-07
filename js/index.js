@@ -9,12 +9,8 @@ $(document).ready(function(){
         var online =[];
         var offline = [];
         for(var i=0; i< data._total; i++){
-        var streamerName = data.streams[i].channel.display_name.toLowerCase();
-            if(streamerName !== undefined){
-                if(streamers.includes(streamerName)){
-                    online.push(streamerName);
-                }
-            }
+            var streamerName = data.streams[i].channel.display_name.toLowerCase();
+            online.push(streamerName);
         }
         for(var x=0; x<streamers.length;x++){
             if(online.indexOf(streamers[x]) === -1) {
@@ -22,7 +18,6 @@ $(document).ready(function(){
             }
             html += "<div class='item'> " + streamers[x] + "</div>";
             $('#rightPane').html(html);
-
         }
 
         console.log("ONLINE: " + online);
