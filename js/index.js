@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $(".button-collapse").sideNav();
-    var streamers = ['goldglove', 'proteqtv', 'c9sneaky', 'freaken_rican', 'lagmarine10', 'calebhart42', 'unlckyme', 'eyes1015', 'delordione', 'freecodecamp', 'food'];
+    var streamers = ['goldglove', 'proteqtv', 'c9sneaky', 'freaken_rican', 'lagmarine10', 'calebhart42', 'unlckyme', 'eyes1015', 'delordione', 'freecodecamp', 'food', "ESL_SC2", "OgamingSC2", "cretetion", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
     var apiURL = "https://api.twitch.tv/kraken/streams?client_id=j6rg8fuur9h606pyrsy9t75rzh1tyqp&channel=" + streamers.join(',');   
     var user = '';
     console.log(apiURL);
