@@ -8,10 +8,11 @@ body {
     height: 100vh;
 }
 
-::-webkit-scrollbar {
-    width: 5px;
-
+.title {
+    font-weight: bold;
 }
-::-webkit-scrollbar-thumb {
-    background: #9E579D;
+
+.onlineIndicator{
+    color: green;
+    font-size: 20px;
 }
