@@ -1,18 +1,23 @@
 body {
-    color: #333;
-    height: 100vh;
-    background: #222;
+  color: #333;
+  height: 100vh;
+  background: #eee;
 }
 
-#wrapper {
-    height: 100vh;
+#wrapper {height: 100vh;}
+
+.title {font-weight: bold;}
+
+.onlineIndicator {
+  color: green;
+  font-size: 20px;
 }
 
-.title {
-    font-weight: bold;
+.errorIndicator {
+  color: crimson;
+  font-size: 20px;
 }
 
-.onlineIndicator{
-    color: green;
-    font-size: 20px;
-}
+.brand-logo{font-family: 'Roboto Condensed', sans-serif;}
+
+nav {padding-left: 20px;}
