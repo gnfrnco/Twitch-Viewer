@@ -23,8 +23,7 @@ $(document).ready(function(){
                 error: function(){
                     deleted.push(streamers[j]);
                 },
-                async: false
-
+                async: false,
             });
 
         }
